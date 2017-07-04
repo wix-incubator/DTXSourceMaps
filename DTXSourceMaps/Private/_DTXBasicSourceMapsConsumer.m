@@ -99,7 +99,7 @@ static BOOL _DTXSourceMapsConsumerIsMappingSeparator(unichar ch)
 	};
 }
 
-- (void)_parseMappings
+- (void)_parse
 {
 	NSInteger generatedLine = 1;
 	NSInteger previousGeneratedColumn = 0;
@@ -208,7 +208,7 @@ static BOOL _DTXSourceMapsConsumerIsMappingSeparator(unichar ch)
 {
 	if(_generatedMappings == nil)
 	{
-		[self _parseMappings];
+		[self _parse];
 	}
 	
 	return _generatedMappings;

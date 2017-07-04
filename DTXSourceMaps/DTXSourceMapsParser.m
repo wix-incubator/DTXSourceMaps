@@ -34,7 +34,7 @@ DTXSourceMapsKey const DTXSourceMapsFileKey = @"file";
 
 + (instancetype)sourceMapsParserForSourceMaps:(NSDictionary<NSString*, id>*)sourceMaps
 {
-	DTXSourceMapsParser* rv = nil;
+	__kindof DTXSourceMapsParser* rv = nil;
 	
 	if(sourceMaps[DTXSourceMapsSectionsKey] != nil)
 	{
@@ -43,6 +43,7 @@ DTXSourceMapsKey const DTXSourceMapsFileKey = @"file";
 	else
 	{
 		rv = [[_DTXBasicSourceMapsConsumer alloc] _initWithSouceMaps:sourceMaps];
+		[rv _parse];
 	}
 	
 	return rv;

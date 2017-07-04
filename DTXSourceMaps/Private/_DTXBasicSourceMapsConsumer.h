@@ -10,4 +10,6 @@
 
 @interface _DTXBasicSourceMapsConsumer : DTXSourceMapsParser
 
+- (void)_parse;
+
 @end
