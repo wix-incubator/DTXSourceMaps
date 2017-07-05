@@ -38,7 +38,7 @@
 
 - (NSString *)description
 {
-	return [NSString stringWithFormat:@"<%@: %p; source = \"%@\"; generatedLine = %@; generatedColumn = %@; originalLine = %@; originalColumn = %@; name = \"%@\">", self.class, self, self.sourceIndex == nil || self.owner == nil ? self.sourceIndex : self.owner.sources[self.sourceIndex.integerValue], self.generatedLine, self.generatedColumn, self.originalLine, self.originalColumn, self.nameIndex == nil || self.owner == nil ? self.nameIndex : self.owner.names[self.nameIndex.integerValue]];
+	return [NSString stringWithFormat:@"<%@: %p; source = \"%@\"; generatedLine = %@; generatedColumn = %@; originalLine = %@; originalColumn = %@; name = \"%@\">", self.class, self, self.sourceIndex == nil || self.owner == nil ? self.sourceIndex : [self.owner.sources[self.sourceIndex.integerValue] lastPathComponent], self.generatedLine, self.generatedColumn, self.originalLine, self.originalColumn, self.nameIndex == nil || self.owner == nil ? self.nameIndex : self.owner.names[self.nameIndex.integerValue]];
 }
 
 @end
@@ -226,11 +226,11 @@ static BOOL _DTXSourceMapsConsumerIsMappingSeparator(unichar ch)
 	needle.sourceIndex = @0;
 	needle.nameIndex = @0;
 	
-	NSInteger index = [self._generatedMappings indexOfObject:needle inSortedRange:NSMakeRange(0, self._generatedMappings.count) options:NSBinarySearchingInsertionIndex usingComparator:self._generatedPositionsDeflatedComparator];
+	NSInteger index = [self._generatedMappings indexOfObject:needle inSortedRange:NSMakeRange(0, self._generatedMappings.count) options:NSBinarySearchingLastEqual | NSBinarySearchingInsertionIndex usingComparator:self._generatedPositionsDeflatedComparator];
 	
 	if(index > 0)
 	{
-		_DTXSourceMapping* mapping = self._generatedMappings[index - 1];
+		_DTXSourceMapping* mapping = self._generatedMappings[index];
 		
 		if([mapping.generatedLine isEqualToNumber:needle.generatedLine])
 		{
