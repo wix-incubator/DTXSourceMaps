@@ -228,7 +228,7 @@ static BOOL _DTXSourceMapsConsumerIsMappingSeparator(unichar ch)
 	
 	NSInteger index = [self._generatedMappings indexOfObject:needle inSortedRange:NSMakeRange(0, self._generatedMappings.count) options:NSBinarySearchingLastEqual | NSBinarySearchingInsertionIndex usingComparator:self._generatedPositionsDeflatedComparator];
 	
-	if(index > 0)
+	if(index < _generatedMappings.count)
 	{
 		_DTXSourceMapping* mapping = self._generatedMappings[index];
 		
