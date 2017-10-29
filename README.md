@@ -1,5 +1,5 @@
 # DTXSourceMaps
-An iOS parser and translator for JavaScript source maps.
+A macOS and iOS parser and translator for JavaScript source maps.
 
 Based on [Mozilla's JavaScript implementation](https://github.com/mozilla/source-map/).
 
