@@ -6,7 +6,7 @@
 //  Copyright © 2017 Leo Natan (Wix). All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import Foundation;
 
 //! Project version number for DTXSourceMaps.
 FOUNDATION_EXPORT double DTXSourceMapsVersionNumber;
