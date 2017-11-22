@@ -185,7 +185,7 @@
 		39352F871F0A23C800D033B2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Leo Natan (Wix)";
 				TargetAttributes = {
 					39352F8F1F0A23C800D033B2 = {
