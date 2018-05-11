@@ -10,6 +10,12 @@
 #import "_DTXBasicSourceMapsConsumer.h"
 #import "_DTXIndexedSourceMapsConsumer.h"
 
+#if __has_include("DTXLogging.h")
+#import "DTXLogging.h"
+DTX_CREATE_LOG(DTXSourceMapsParser)
+#define NSLog dtx_log_error
+#endif
+
 static const NSInteger __suportedVersion = 3;
 
 DTXSourceMapsKey const DTXSourceMapsVersionKey = @"version";
