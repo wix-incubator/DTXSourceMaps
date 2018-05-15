@@ -65,7 +65,7 @@
 			
 			internalSection.consumer = [DTXSourceMapsParser sourceMapsParserForSourceMaps:obj[@"map"]];
 			
-			[_internalSections addObject:internalSection];
+			[self->_internalSections addObject:internalSection];
 		}];
 	}
 	
