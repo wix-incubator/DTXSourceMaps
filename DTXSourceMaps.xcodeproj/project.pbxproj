@@ -11,13 +11,11 @@
 		39352FBB1F0A25E300D033B2 /* _DTXBasicSourceMapsConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 39352FB71F0A24F400D033B2 /* _DTXBasicSourceMapsConsumer.m */; };
 		39352FBC1F0A25E600D033B2 /* _DTXBase64VLQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 39352FB61F0A24F400D033B2 /* _DTXBase64VLQ.m */; };
 		39352FBD1F0A25EA00D033B2 /* DTXSourceMapsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 39352FB91F0A250B00D033B2 /* DTXSourceMapsParser.m */; };
-		39352FC51F0A293100D033B2 /* DTXSourceMapsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39352FC41F0A293100D033B2 /* DTXSourceMapsTests.m */; };
 		39352FC71F0A293100D033B2 /* DTXSourceMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39352F901F0A23C800D033B2 /* DTXSourceMaps.framework */; };
 		39352FCD1F0A295A00D033B2 /* DTXSourceMapsParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 39352FBA1F0A250B00D033B2 /* DTXSourceMapsParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		39352FCE1F0A296200D033B2 /* _DTXBasicSourceMapsConsumer.h in Headers */ = {isa = PBXBuildFile; fileRef = 39352FB41F0A24F400D033B2 /* _DTXBasicSourceMapsConsumer.h */; };
 		39352FCF1F0A296600D033B2 /* _DTXBase64VLQ.h in Headers */ = {isa = PBXBuildFile; fileRef = 39352FB81F0A24F400D033B2 /* _DTXBase64VLQ.h */; };
 		39352FD01F0A296800D033B2 /* DTXSourceMapsParser-Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 39352FB51F0A24F400D033B2 /* DTXSourceMapsParser-Private.h */; };
-		39963F121F0B840B00F983DC /* map.json in Resources */ = {isa = PBXBuildFile; fileRef = 39963F111F0B7F1400F983DC /* map.json */; };
 		39BE9BE11F0A5C05000E625B /* _DTXIndexedSourceMapsConsumer.h in Headers */ = {isa = PBXBuildFile; fileRef = 39BE9BDF1F0A5C05000E625B /* _DTXIndexedSourceMapsConsumer.h */; };
 		39BE9BE21F0A5C05000E625B /* _DTXIndexedSourceMapsConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 39BE9BE01F0A5C05000E625B /* _DTXIndexedSourceMapsConsumer.m */; };
 /* End PBXBuildFile section */
@@ -44,9 +42,6 @@
 		39352FB91F0A250B00D033B2 /* DTXSourceMapsParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTXSourceMapsParser.m; sourceTree = "<group>"; };
 		39352FBA1F0A250B00D033B2 /* DTXSourceMapsParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTXSourceMapsParser.h; sourceTree = "<group>"; };
 		39352FC21F0A293000D033B2 /* DTXSourceMapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTXSourceMapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		39352FC41F0A293100D033B2 /* DTXSourceMapsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTXSourceMapsTests.m; sourceTree = "<group>"; };
-		39352FC61F0A293100D033B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		39963F111F0B7F1400F983DC /* map.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = map.json; sourceTree = "<group>"; };
 		39BE9BDF1F0A5C05000E625B /* _DTXIndexedSourceMapsConsumer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _DTXIndexedSourceMapsConsumer.h; sourceTree = "<group>"; };
 		39BE9BE01F0A5C05000E625B /* _DTXIndexedSourceMapsConsumer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _DTXIndexedSourceMapsConsumer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				39352F921F0A23C800D033B2 /* DTXSourceMaps */,
-				39352FC31F0A293100D033B2 /* DTXSourceMapsTests */,
 				39352F911F0A23C800D033B2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,16 +106,6 @@
 				39BE9BE01F0A5C05000E625B /* _DTXIndexedSourceMapsConsumer.m */,
 			);
 			path = Private;
-			sourceTree = "<group>";
-		};
-		39352FC31F0A293100D033B2 /* DTXSourceMapsTests */ = {
-			isa = PBXGroup;
-			children = (
-				39963F111F0B7F1400F983DC /* map.json */,
-				39352FC41F0A293100D033B2 /* DTXSourceMapsTests.m */,
-				39352FC61F0A293100D033B2 /* Info.plist */,
-			);
-			path = DTXSourceMapsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,7 +210,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39963F121F0B840B00F983DC /* map.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +231,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39352FC51F0A293100D033B2 /* DTXSourceMapsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
